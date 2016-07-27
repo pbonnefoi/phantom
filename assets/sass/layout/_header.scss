@@ -7,17 +7,17 @@
 /* Header */
 
 	#header {
-		@include padding(5em, 0, (3em, 0, -5em, 0));
+		@include padding(0, 0, (0, 0, -5em, 0));
+		background-color: _palette(bg-accent);
 
 		.logo {
 			display: block;
 			border-bottom: 0;
-			color: inherit;
-			font-weight: _font(weight-bold);
-			letter-spacing: _font(letter-spacing);
-			margin: 0 0 (_size(element-margin) * 1.25) 0;
+			color: _palette(accent0);
+			margin: 0;
 			text-decoration: none;
-			text-transform: uppercase;
+			text-transform: none;
+			text-shadow: .03em .03em 0 rgba(0, 0, 0, .1);
 			display: inline-block;
 
 			> * {
@@ -59,7 +59,6 @@
 						height: 3em;
 						line-height: 3em;
 						padding: 0 1.5em;
-						background-color: transparentize(_palette(bg), 0.5);
 						border-radius: _size(border-radius);
 						border: 0;
 						font-size: 0.8em;
@@ -92,12 +91,12 @@
 						}
 
 						&:before {
-							background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><style>line { stroke-width: 8px; stroke: #{_palette(accent1)}; }</style><line x1="0" y1="25" x2="100" y2="25" /><line x1="0" y1="50" x2="100" y2="50" /><line x1="0" y1="75" x2="100" y2="75" /></svg>');
+							background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><style>line { stroke-width: 8px; stroke: #{_palette(accent0)}; }</style><line x1="0" y1="25" x2="100" y2="25" /><line x1="0" y1="50" x2="100" y2="50" /><line x1="0" y1="75" x2="100" y2="75" /></svg>');
 							opacity: 0;
 						}
 
 						&:after {
-							background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><style>line { stroke-width: 8px; stroke: #{_palette(fg)}; }</style><line x1="0" y1="25" x2="100" y2="25" /><line x1="0" y1="50" x2="100" y2="50" /><line x1="0" y1="75" x2="100" y2="75" /></svg>');
+							background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><style>line { stroke-width: 8px; stroke: #{_palette(accent0)}; }</style><line x1="0" y1="25" x2="100" y2="25" /><line x1="0" y1="50" x2="100" y2="50" /><line x1="0" y1="75" x2="100" y2="75" /></svg>');
 							opacity: 1;
 						}
 
@@ -116,7 +115,7 @@
 		}
 
 		@include breakpoint(small) {
-			@include padding(3em, 0, (1em, 0, -3em, 0));
+			@include padding(1em, 0, (1em, 0, -3em, 0));
 
 			nav {
 				right: 0.5em;

@@ -8,12 +8,13 @@
 
 	.tiles {
 		$gutter: _size(gutter);
+		$gutter_sidebar: _size(gutter-sidebar);
 		$duration: 0.5s;
 		$ease: 'ease';
 
 		@include vendor('display', 'flex');
 		@include vendor('flex-wrap', 'wrap');
-		postiion: relative;
+		position: relative;
 		margin: ($gutter * -1) 0 0 ($gutter * -1);
 
 		article {
@@ -22,8 +23,33 @@
 				'opacity #{$duration} #{$ease}'
 			));
 			position: relative;
-			width: calc(#{(100% / 3)} - #{$gutter * 1});
+			&.watch {
+				width: calc(#{(100% / 3)} - #{$gutter * 1});
+
+				> a {
+
+					h2 {
+						@include vendor('transition', (
+							'opacity #{$duration} #{$ease}'
+						));
+						margin: 0;
+						opacity: 0;
+					}
+
+				}
+
+			}
+			&.article {
+				width: calc(#{(100% / 1.5)} - #{$gutter * 1});
+			}
 			margin: $gutter 0 0 $gutter;
+			&.sidebar {
+				width: calc(#{(100% / 3)} - #{$gutter_sidebar * 1});
+				&.article {
+					width: calc(#{(100% / 1)} - #{$gutter_sidebar * 1});
+				}
+				margin: $gutter_sidebar 0 0 $gutter_sidebar;
+			}
 
 			> .image {
 				@include vendor('transition', 'transform #{$duration} #{$ease}');
@@ -126,42 +152,6 @@
 				}
 			}
 
-			&.style1 {
-				> .image:before {
-					background-color: _palette(accent1);
-				}
-			}
-
-			&.style2 {
-				> .image:before {
-					background-color: _palette(accent2);
-				}
-			}
-
-			&.style3 {
-				> .image:before {
-					background-color: _palette(accent3);
-				}
-			}
-
-			&.style4 {
-				> .image:before {
-					background-color: _palette(accent4);
-				}
-			}
-
-			&.style5 {
-				> .image:before {
-					background-color: _palette(accent5);
-				}
-			}
-
-			&.style6 {
-				> .image:before {
-					background-color: _palette(accent6);
-				}
-			}
-
 			body:not(.is-touch) & {
 				&:hover {
 					> .image {
@@ -214,7 +204,9 @@
 				&.watch {
 					width: calc(#{(100% / 3)} - #{$gutter * 1});
 				}
-
+				&.sidebar {
+					width: calc(#{(100% / 3)} - #{$gutter_sidebar * 1});
+				}
 				&.article {
 					width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 				}
@@ -231,7 +223,9 @@
 				&.watch {
 					width: calc(#{(100% / 2)} - #{$gutter * 1});
 				}
-
+				&.sidebar {
+					width: calc(#{(100% / 2)} - #{$gutter_sidebar * 1});
+				}
 				&.article {
 					width: calc(#{(100% / 2)} - #{$gutter * 1});
 				}
@@ -248,7 +242,9 @@
 				&.watch {
 					width: calc(#{(100% / 2)} - #{$gutter * 1});
 				}
-
+				&.sidebar {
+					width: calc(#{(100% / 2)} - #{$gutter_sidebar * 1});
+				}
 				&.article {
 					width: calc(#{(100% / 2)} - #{$gutter * 1});
 				}
