@@ -2191,7 +2191,8 @@ button,
 /* Header */
 #header {
   padding: 0 0 0.1em 0 ;
-  background-color: #607080; }
+  background-color: #607080;
+  margin: 0 0 2em 0; }
   #header .logo {
     display: block;
     border-bottom: 0;
