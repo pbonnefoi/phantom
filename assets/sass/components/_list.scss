@@ -21,6 +21,24 @@
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1em;
 
+		&.beforeafter {
+			position: relative;
+			width: 100%;
+			height:100%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			pointer-events: auto;
+			-ms-touch-action: none;
+
+			li {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+		}
+
 		li {
 			padding-left: 0.5em;
 		}
@@ -39,6 +57,7 @@
 				}
 			}
 		}
+
 
 		&.icons {
 			cursor: default;

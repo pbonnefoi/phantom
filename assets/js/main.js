@@ -6,18 +6,24 @@
 
 (function($) {
 
+
 	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
+		xlarge: '(max-width: 1680px)',
+		large:  '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small:  '(max-width: 736px)',
+		xsmall: '(max-width: 480px)'
 	});
 
 	$(function() {
 
-		var	$window = $(window),
+		var $window = $(window),
 			$body = $('body');
+
+			$('.beforeafter').beforeafter({
+					cursor: false,      //Default
+					direction: 'ltr'    //ttb, btt, ltr, rtl
+			});
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -50,7 +56,7 @@
 						.on('keydown', function(event) {
 
 							if (event.keyCode == 13
-							&&	event.ctrlKey) {
+							&&  event.ctrlKey) {
 
 								event.preventDefault();
 								event.stopPropagation();
@@ -84,7 +90,7 @@
 
 					// Fix.
 						if (skel.vars.browser == 'ie'
-						||	skel.vars.mobile)
+						||  skel.vars.mobile)
 							$this
 								.css('max-height', '10em')
 								.css('overflow-y', 'auto');

@@ -51,6 +51,7 @@
 				margin: $gutter_sidebar 0 0 $gutter_sidebar;
 			}
 
+
 			> .image {
 				@include vendor('transition', 'transform #{$duration} #{$ease}');
 				position: relative;
@@ -154,6 +155,7 @@
 			}
 
 			&.watch {
+
 				> .image:before {
 					background-color: _palette(accent1);
 				}
