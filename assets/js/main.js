@@ -21,8 +21,16 @@
 			$body = $('body');
 
 			$('.beforeafter').beforeafter({
-					cursor: false,      //Default
-					direction: 'ltr'    //ttb, btt, ltr, rtl
+					cursor: false,
+					direction: 'ltr'
+			});
+
+			$('#accordion-slider').accordionSlider({
+					autoplay: false,
+					width: 867,
+					height: 380,
+					openPanelDuration: 500,
+					closePanelDuration: 500
 			});
 
 		// Disable animations/transitions until the page has loaded.
