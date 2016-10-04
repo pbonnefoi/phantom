@@ -44,6 +44,15 @@
 					}
 				}
 			}
+			&.versus {
+				width: calc(#{(100% / 3)} - #{$gutter * 1});
+
+				img {
+					display: block;
+					width: 100% !important;
+					height: 100%;
+				}
+			}
 			&.watch {
 				width: calc(#{(100% / 3)} - #{$gutter * 1});
 
@@ -58,7 +67,6 @@
 					}
 
 				}
-
 			}
 			&.article {
 				width: calc(#{(100% / 1.5)} - #{$gutter * 1});
@@ -246,6 +254,10 @@
 				&.article {
 					width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 				}
+				&.top-five {
+					width: calc(#{(100% / 1.5)} - #{$gutter * 1});
+					max-width: calc(#{(100% / 1.5)} - #{$gutter * 1});
+				}
 				margin: $gutter 0 0 $gutter;
 			}
 		}
@@ -265,6 +277,10 @@
 				&.article {
 					width: calc(#{(100% / 2)} - #{$gutter * 1});
 				}
+				&.top-five {
+					width: calc(#{(100% / 2)} - #{$gutter * 1});
+					max-width: calc(#{(100% / 2)} - #{$gutter * 1});
+				}
 				margin: $gutter 0 0 $gutter;
 			}
 		}
@@ -283,6 +299,10 @@
 				}
 				&.article {
 					width: calc(#{(100% / 1)} - #{$gutter * 1});
+				}
+				&.top-five {
+					width: calc(#{(100% / 1)} - #{$gutter * 1});
+					max-width: calc(#{(100% / 1)} - #{$gutter * 1});
 				}
 				margin: $gutter 0 0 $gutter;
 

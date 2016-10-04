@@ -2224,6 +2224,12 @@ button,
           height: 381px; }
           .tiles article.top-five ul.as-panels li.as-panel img {
             width: 100%; }
+    .tiles article.versus {
+      width: calc(33.33333% - 2em); }
+      .tiles article.versus img {
+        display: block;
+        width: 100% !important;
+        height: 100%; }
     .tiles article.watch {
       width: calc(33.33333% - 2em); }
       .tiles article.watch > a h2 {
@@ -2384,7 +2390,10 @@ button,
         .tiles article.sidebar {
           width: calc(33.33333% - 0.5em); }
         .tiles article.article {
-          width: calc(66.66667% - 1em); } }
+          width: calc(66.66667% - 1em); }
+        .tiles article.top-five {
+          width: calc(66.66667% - 1em);
+          max-width: calc(66.66667% - 1em); } }
   @media screen and (max-width: 980px) {
     .tiles {
       margin: -2em 0 0 -2em; }
@@ -2395,7 +2404,10 @@ button,
         .tiles article.sidebar {
           width: calc(50% - 0.5em); }
         .tiles article.article {
-          width: calc(50% - 2em); } }
+          width: calc(50% - 2em); }
+        .tiles article.top-five {
+          width: calc(50% - 2em);
+          max-width: calc(50% - 2em); } }
   @media screen and (max-width: 736px) {
     .tiles {
       margin: -1em 0 0 -1em; }
@@ -2407,6 +2419,9 @@ button,
           width: calc(100% - 0.5em); }
         .tiles article.article {
           width: calc(100% - 1em); }
+        .tiles article.top-five {
+          width: calc(100% - 1em);
+          max-width: calc(100% - 1em); }
         .tiles article:hover > .image {
           -moz-transform: scale(1.0);
           -webkit-transform: scale(1.0);
