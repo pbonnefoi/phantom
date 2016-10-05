@@ -75,5 +75,6 @@
 		}
 	}
 	.cursor {
-		background-color: _palette(bg-accent) !important;
+		background-color: _palette(fg-accent) !important;
+		width: 5px !important;
 	}

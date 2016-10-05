@@ -180,7 +180,7 @@
 
 						&:after {
 							background-color: _palette(bg-accent);
-							opacity: 0.35;
+							opacity: 0.5;
 						}
 					}
 
@@ -207,7 +207,7 @@
 			article {
 				.tiles-content-wrapper {
 					max-height: 15em;
-					opacity: 1;
+					opacity: 0;
 				}
 			}
 		}
