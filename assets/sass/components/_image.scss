@@ -8,9 +8,10 @@
 
 	.image {
 		border-radius: _size(border-radius);
-		border: 0;
 		display: inline-block;
 		position: relative;
+		border: 5px solid _palette(fg-accent) !important;
+		border-style: outset;
 
 		img {
 			border-radius: _size(border-radius);
@@ -72,4 +73,7 @@
 				width: 100%;
 			}
 		}
+	}
+	.cursor {
+		background-color: _palette(bg-accent) !important;
 	}

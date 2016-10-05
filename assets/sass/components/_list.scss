@@ -36,6 +36,20 @@
 				width: 100%;
 				height: 100%;
 				overflow: hidden;
+				padding-left: 0;
+			}
+		}
+
+		&.as-panels {
+			margin: 0;
+			padding-left: 0;
+			width: 100%;
+			height: 100%;
+			list-style: none;
+			li.as-panel {
+				padding-left: 0;
+				width: 412px;
+				height: 381px;
 			}
 		}
 

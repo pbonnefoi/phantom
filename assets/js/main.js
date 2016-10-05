@@ -21,8 +21,15 @@
 			$body = $('body');
 
 			$('.beforeafter').beforeafter({
-					cursor: false,
-					direction: 'ltr'
+					cursor: true,
+					direction: 'rtl',
+					classNameCursor: 'cursor',
+					checkImagesLoaded: false,
+					useCSSTransform: true,
+					debug: false,
+					callback: function(){
+							this.goTo(50, 1000, true, 'swing');
+					}
 			});
 
 			$('#accordion-slider').accordionSlider({
