@@ -40,6 +40,12 @@
 			}
 		}
 
+		&.attributes {
+			list-style: none;
+			padding: 0;
+		    margin: 1em 0 1em 0;
+		}
+
 		&.as-panels {
 			margin: 0;
 			padding-left: 0;

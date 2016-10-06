@@ -11,6 +11,11 @@
 		border-bottom: none;
 		position: relative;
 
+		> span {
+			padding-left: 0.5em;
+		    font-weight: bold;
+		}
+
 		> .label {
 			display: none;
 		}
@@ -77,4 +82,24 @@
 				background-color: transparentize(_palette(accent1), 0.9);
 			}
 		}
+	}
+
+	.logovote {
+		.logo {
+			padding-left: 0.5em;
+			line-height: 0em;
+		}
+	}
+
+	.plus1-widget {
+		margin: auto 5px;
+		.plus1-vote-text {
+		    background: none;
+		    text-indent: 0;
+		}
+	}
+
+	.vote {
+	    display: inline-flex;
+    	background: #ddd;
 	}

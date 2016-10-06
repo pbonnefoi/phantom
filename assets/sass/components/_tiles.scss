@@ -17,17 +17,41 @@
 		position: relative;
 		margin: ($gutter * -1) 0 0 ($gutter * -1);
 
+		div.block {
+			position: relative;
+			margin: $gutter 0 0 $gutter;
+			width: calc(#{(100% / 3)} - #{$gutter * 1});
+			h2 {
+				margin: 0;
+				font-size: 1em;
+				line-height: 1em;
+			}
+			ul {
+				&.row {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					li {
+						padding-left: 0.5em;
+					}
+				}
+			}
+		}
 		article {
 			@include vendor('transition', (
 				'transform #{$duration} #{$ease}',
 				'opacity #{$duration} #{$ease}'
 			));
 			position: relative;
+			margin: $gutter 0 0 $gutter;
 			&.top-five {
 				width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 				height: auto;
 				max-width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 				position: relative;
+				a {
+					z-index: 0;
+				}
 			}
 			&.versus {
 				width: calc(#{(100% / 3)} - #{$gutter * 1});
@@ -46,12 +70,19 @@
 			&.article {
 				width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 			}
-			margin: $gutter 0 0 $gutter;
-			&.sidebar {
+			&.brand {
+				width: calc(#{(100% / 6)} - #{$gutter * 1});
+			}
+			&.sidebar, &.inline {
+				width: calc(#{(100% / 1)} - #{$gutter_sidebar * 1});
+				margin: $gutter_sidebar 0 0 $gutter_sidebar;
+			}
+			&.sidebar-square {
 				width: calc(#{(100% / 3)} - #{$gutter_sidebar * 1});
-				&.article {
-					width: calc(#{(100% / 1)} - #{$gutter_sidebar * 1});
-				}
+				margin: $gutter_sidebar 0 0 $gutter_sidebar;
+			}
+			&.sidebar-watch {
+				width: calc(#{(100% / 2)} - #{$gutter_sidebar * 1});
 				margin: $gutter_sidebar 0 0 $gutter_sidebar;
 			}
 
@@ -63,12 +94,6 @@
 				width: 100%;
 				border-radius: _size(border-radius);
 				overflow: hidden;
-
-				img {
-					display: block;
-					width: 100% !important;
-					height: 100%;
-				}
 
 				&:before {
 					@include vendor('pointer-events', 'none');
@@ -137,6 +162,8 @@
 				h2 {
 					margin: 0;
 					border-bottom: 0;
+					font-size: 1em;
+					line-height: 1em;
 				}
 
 				.tiles-content-wrapper {
@@ -156,19 +183,6 @@
 				}
 			}
 
-			&.watch {
-
-				> .image:before {
-					background-color: _palette(accent1);
-				}
-			}
-
-			&.article {
-				> .image:before {
-					background-color: _palette(accent1);
-				}
-			}
-
 			body:not(.is-touch) & {
 				&:hover {
 					> .image {
@@ -180,7 +194,7 @@
 
 						&:after {
 							background-color: _palette(bg-accent);
-							opacity: 0.5;
+							opacity: 0.8;
 						}
 					}
 
@@ -221,8 +235,11 @@
 				&.watch {
 					width: calc(#{(100% / 3)} - #{$gutter * 1});
 				}
-				&.sidebar {
-					width: calc(#{(100% / 3)} - #{$gutter_sidebar * 1});
+				&.brand {
+					width: calc(#{(100% / 6)} - #{$gutter * 1});
+				}
+				&.sidebar, &.inline  {
+					width: calc(#{(100% / 1)} - #{$gutter_sidebar * 1});
 				}
 				&.article {
 					width: calc(#{(100% / 1.5)} - #{$gutter * 1});
@@ -231,6 +248,10 @@
 					width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 					max-width: calc(#{(100% / 1.5)} - #{$gutter * 1});
 				}
+				margin: $gutter 0 0 $gutter;
+			}
+			div.block {
+				width: calc(#{(100% / 3)} - #{$gutter * 1});
 				margin: $gutter 0 0 $gutter;
 			}
 		}
@@ -244,16 +265,23 @@
 				&.watch {
 					width: calc(#{(100% / 2)} - #{$gutter * 1});
 				}
-				&.sidebar {
-					width: calc(#{(100% / 2)} - #{$gutter_sidebar * 1});
+				&.brand {
+					width: calc(#{(100% / 3)} - #{$gutter * 1});
+				}
+				&.sidebar, &.inline  {
+					width: calc(#{(100% / 1)} - #{$gutter_sidebar * 1});
 				}
 				&.article {
-					width: calc(#{(100% / 2)} - #{$gutter * 1});
+					width: calc(#{(100% / 1)} - #{$gutter * 1});
 				}
 				&.top-five {
-					width: calc(#{(100% / 2)} - #{$gutter * 1});
-					max-width: calc(#{(100% / 2)} - #{$gutter * 1});
+					width: calc(#{(100% / 1)} - #{$gutter * 1});
+					max-width: calc(#{(100% / 1)} - #{$gutter * 1});
 				}
+				margin: $gutter 0 0 $gutter;
+			}
+			div.block {
+				width: calc(#{(100% / 2)} - #{$gutter * 1});
 				margin: $gutter 0 0 $gutter;
 			}
 		}
@@ -267,7 +295,10 @@
 				&.watch {
 					width: calc(#{(100% / 1)} - #{$gutter * 1});
 				}
-				&.sidebar {
+				&.brand {
+					width: calc(#{(100% / 3)} - #{$gutter * 1});
+				}
+				&.sidebar, &.inline  {
 					width: calc(#{(100% / 1)} - #{$gutter_sidebar * 1});
 				}
 				&.article {
@@ -284,6 +315,10 @@
 						@include vendor('transform', 'scale(1.0)');
 					}
 				}
+			}
+			div.block {
+				width: calc(#{(100% / 1)} - #{$gutter * 1});
+				margin: $gutter 0 0 $gutter;
 			}
 		}
 
