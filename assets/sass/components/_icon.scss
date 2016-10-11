@@ -83,3 +83,23 @@
 			}
 		}
 	}
+
+	.logovote {
+		.logo {
+			padding-left: 0.5em;
+			line-height: 0em;
+		}
+	}
+
+	.plus1-widget {
+		margin: auto 5px;
+		.plus1-vote-text {
+		    background: none;
+		    text-indent: 0;
+		}
+	}
+
+	.vote {
+	    display: inline-flex;
+    	background: #ddd;
+	}
