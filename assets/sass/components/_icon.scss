@@ -11,6 +11,11 @@
 		border-bottom: none;
 		position: relative;
 
+		> span {
+			padding-left: 0.5em;
+		    font-weight: bold;
+		}
+
 		> .label {
 			display: none;
 		}

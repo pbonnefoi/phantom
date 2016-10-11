@@ -14,10 +14,10 @@
 	table {
 		margin: 0 0 _size(element-margin) 0;
 		width: 100%;
+		border: 2px solid _palette(fg-accent);
 
 		tbody {
 			tr {
-				border: solid _size(border-width) _palette(border);
 				border-left: 0;
 				border-right: 0;
 
@@ -28,23 +28,23 @@
 		}
 
 		td {
-			padding: 0.75em 0.75em;
+		    padding: 0.15em 0.25em;
+		    font-size: 12pt;
+		    &.icon {
+	    	    max-width: 20px;
+		    }
 		}
 
 		th {
 			color: _palette(fg-bold);
 			font-size: 0.9em;
 			font-weight: _font(weight-bold);
-			padding: 0 0.75em 0.75em 0.75em;
+			padding: 0.1em 0.25em;
 			text-align: left;
 		}
 
 		thead {
 			border-bottom: solid (_size(border-width) * 2) _palette(border);
-		}
-
-		tfoot {
-			border-top: solid (_size(border-width) * 2) _palette(border);
 		}
 
 		&.alt {
@@ -72,10 +72,6 @@
 
 			thead {
 				border-bottom: 0;
-			}
-
-			tfoot {
-				border-top: 0;
 			}
 		}
 	}

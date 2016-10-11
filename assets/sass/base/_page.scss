@@ -37,8 +37,52 @@
 
 	}
 
-	@include breakpoint(small) {
-		.desktop {
-			display: none;
+	.node-type-article {
+		.row {
+		    padding-bottom: 3em;
 		}
+		.article-body {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.watch-header-wrapper {
+		padding-bottom: 1em;
+	}
+
+	.share-links {
+		margin: 0.5em 0 0.5em 0;
+		a {
+			border-bottom: 0;
+		}
+	}
+
+	.brand-logo {
+		line-height: 0em;
+		padding-bottom: 1em;
+	}
+
+	.plus1-widget {
+		margin: auto 5px;
+		.plus1-vote-text {
+		    background: none;
+		    text-indent: 0;
+		}
+	}
+
+	.vote {
+	    display: inline-flex;
+    	background: #ddd;
+	}
+
+	.view {
+		padding-top: 1em;
+	}
+
+	@include breakpoint(small) {
+		//.desktop {
+		//	display: none;
+		//}
 	}

@@ -48,6 +48,7 @@
 
 	p {
 		margin: 0 0 _size(element-margin) 0;
+		font-size: 13pt;
 	}
 
 	.logo {
@@ -90,12 +91,13 @@
 	h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
-		line-height: 1.5;
+		line-height: 1.13em;
 		margin: 0 0 (_size(element-margin) * 1) 0;
 		letter-spacing: _font(letter-spacing);
 
 		a {
 			color: inherit;
+			border-bottom: 0;
 		}
 	}
 
@@ -124,6 +126,9 @@
 	}
 
 	@include breakpoint(medium) {
+		.logo {
+			font-size: 3em;
+		}
 		h1, h2, h3, h4, h5, h6 {
 			br {
 				display: none;
@@ -132,6 +137,10 @@
 	}
 
 	@include breakpoint(small) {
+		.logo {
+			font-size: 1.9em;
+		}
+
 		h2 {
 			font-size: 1em;
 		}

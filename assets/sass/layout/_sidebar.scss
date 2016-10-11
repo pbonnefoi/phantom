@@ -64,8 +64,6 @@
 		@include breakpoint(large) {
 			$gutter: _size(gutter) * 0.5;
 
-			@include padding(5em, 0);
-
 			> .inner {
 				section:nth-child(1) {
 					width: calc(66% - #{$gutter});
